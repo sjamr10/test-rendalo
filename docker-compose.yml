@@ -1,0 +1,22 @@
+version: "3.6"
+services:
+  mongo:
+    image: mongo:4-bionic
+    ports:
+      - "27017:27017"
+  test-rendalo-dev:
+    build:
+      context: .
+      target: dev
+    image: test-rendalo-dev
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./src/:/usr/src/app/src/
+  test-rendalo-prod:
+    build:
+      context: .
+      target: prod
+    image: test-rendalo-prod
+    ports:
+      - "3003:3000"
