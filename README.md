@@ -21,6 +21,10 @@ http://localhost:3003/api/people
 docker-compose up --build mongo test-rendalo-test
 ```
 
+## Comments
+
+There are a couple of bad things here, particularly in the tests; in the real world it shouldn't connect to mongo there, it could use mocks or something like that. I'm doing that just for the sake of time and for the purposes of this test.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
