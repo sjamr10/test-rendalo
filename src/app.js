@@ -14,4 +14,7 @@ app.use(bodyParser());
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen(3000);
+
+const server = app.listen(3000);
+
+module.exports = server;
