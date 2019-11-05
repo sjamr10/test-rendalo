@@ -15,6 +15,12 @@ Then you can test the routes on localhost on port 3003.
 i.e:
 http://localhost:3003/api/people
 
+## How to run the tests
+
+```bash
+docker-compose up --build mongo test-rendalo-test
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
