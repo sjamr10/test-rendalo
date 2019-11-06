@@ -12,6 +12,8 @@ routes({ router });
 app.use(logger());
 app.use(bodyParser());
 
+require('./middleware')(app);
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 
